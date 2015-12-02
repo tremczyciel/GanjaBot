@@ -25,7 +25,7 @@ def command_cleanup(bot, room, nick, access_level, parameters, message):
     num = 20
 
   for i in xrange(num):
-    bot.send_room_message(room, '')
+    bot.send_room_message(room, 'Czyszczenie historii...')
   if message.getType() == 'chat':
     return 'Sending %d empty messages to erase the history.'%(num)
 
