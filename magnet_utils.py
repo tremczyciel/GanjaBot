@@ -59,11 +59,7 @@ def writelog(filename, text):
   f.close()
 
 def hasbadwords(text):
-  badwords = ['bitch', 'fuck', 'asshole', 'shit', 'cunt', 'whore', 'slut',
-    'cocksuck', 'f*ck', 'b*tch', 'sh*t', 'sh!t', 'faggot', 'whor3',
-    'b!tch', 'phuck', 'sh1t', 'nigger', 'wank', 'goddamn', 'dickhead',
-    'bollocks', 'bastard', 'my dick', 'dafuq', 'biatch']
-  
+  badwords = ['palenie.cz', 'paleniecz', 'fakeweed', 'gbac', 'odczynnikchemiczne', 'rcsafe', 'GRC', 'genuine research chemicals', 'genuineresearchchemicals', 'genuine-rc.nl', 'befree', 'befreerc', 'b3', 'officialbenzofury', 'ucygana', 'rcwolf.nl', 'rcwolf', 'black-chem', 'blackchem', 'ksero24', 'pv8.nl', 'brainwasher', 'r-c.com', 'gamma cleaner', 'gammacleaner', 'eurochemicalsco', 'hajsenberg', 'topone', 'chemiczni.eu', 'how-high', 'legalchem', 'legalchem.pl', 'designerchemical', 'odczynniki.cz', 'legalne-ziola', 'synthetics.pl', 'coolchem', 'rcforyou.net', 'rc4you', 'rcforyou', 'rcchemicals', 'mefedron.pl', 'bazarr.nl', 'bazarr', 'fakehash.pl', 'stymulab', 'paularc', 'fakeshop', 'get-rc', 'peakowski', 'olam', 'kolekcjoner.nl', 'kolekcjonernl', 'gblchrom']
   textl = text.replace(u'\xad', '').lower()
   for word in badwords:
     if word in textl: return True
