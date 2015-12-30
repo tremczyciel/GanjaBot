@@ -92,12 +92,12 @@ def event_joined(bot, (presence, room, nick, jid, role, affiliation, status, sta
   addseen(bot, room, nick, jid, 'join', (status, status_text))
 
 def command_seen(bot, room, nick, access_level, parameters, message):
-  if not parameters: return 'Whom are you looking for?'
+  if not parameters: return 'Kogo ty szukasz do licha?'
   target = parameters
-  if target == nick: return 'Are you looking for yourself?'
+  if target == nick: return 'Szukasz samego siebie?'
   
   seennick = seenify_nick(target)
-  if not seennick: return "I don't remember such weird nicks."
+  if not seennick: return "Nie pamietam takiego  usera."
 
   if not room in seen_db or not seennick in seen_db[room]:
     if bot.in_roster(room, target):
